@@ -2,7 +2,9 @@
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Soldier.cs">
     <Files>
-      <File FileName="Assets\Script\Soldier.cs" Line="48" Column="3" />
+      <File FileName="Assets\Script\deathfloor.cs" Line="7" Column="41" />
+      <File FileName="Assets\Script\Camera.cs" Line="13" Column="36" />
+      <File FileName="Assets\Script\Soldier.cs" Line="9" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

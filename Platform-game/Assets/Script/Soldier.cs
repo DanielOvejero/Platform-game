@@ -6,7 +6,7 @@ public class Soldier : MonoBehaviour {
 	public Vector3 speed;
 	public Vector3 acceleration;
 
-	private bool isFalling = false;
+	private bool isFalling;
 
 	// Use this for initialization
 	void Start () {
