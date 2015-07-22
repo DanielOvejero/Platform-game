@@ -5,6 +5,9 @@ public class Soldier : MonoBehaviour {
 	Vector3 position;
 	public Vector3 speed;
 	public Vector3 acceleration;
+
+	private bool isFalling = false;
+
 	// Use this for initialization
 	void Start () {
 		SetSpeed (0, 0);
@@ -21,17 +24,32 @@ public class Soldier : MonoBehaviour {
 			SetSpeed (1, 0);
 		if (Input.GetKey (KeyCode.S))
 			SetSpeed (0, 0);
+
+
 		Vector3 soldierPosition = this.transform.position;
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			soldierPosition.x-=0.05F;
+			soldierPosition.x-=0.1F;
 			this.transform.position=soldierPosition;
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			soldierPosition.x+=0.05F;
+			soldierPosition.x+=0.1F;
 			this.transform.position=soldierPosition;
 		}
-	
+
+
+		if (Input.GetKeyDown(KeyCode.UpArrow) && isFalling == false) {
+			GetComponent<Rigidbody>().AddForce(new Vector3 (0, 500, 0));
+			isFalling = true;
+		}
+
 	}
+
+	void OnCollisionStay(){
+		isFalling = false;
+
+	}
+
+
 	void SetSpeed(float a,float b){
 		speed.x = a;
 		speed.y = b;
