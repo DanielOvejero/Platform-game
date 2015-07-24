@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\Camera.cs" />
+     <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\Soldier.cs" />
      <Compile Include="Assets\Script\UI_manager.cs" />
      <Compile Include="Assets\Script\deathfloor.cs" />
