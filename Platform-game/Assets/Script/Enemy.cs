@@ -10,8 +10,7 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
-	}
-	
+	}	
 	// Update is called once per frame
 	void Update () {
 		Vector3 savedEnemyPosition = transform.position;
@@ -26,9 +25,9 @@ public class Enemy : MonoBehaviour {
 	}
 		void OnTriggerEnter(Collider collider){
 			GameObject collidedWith = collider.gameObject;
-			if (collidedWith.CompareTag ("Soldier")) {
-				print("You died!");
-				Destroy(collidedWith);
-			}
+			if (collidedWith.CompareTag ("Soldier") ) {
+			print ("You died!");
+			Destroy (collidedWith);
+		} 
 		}
 }
